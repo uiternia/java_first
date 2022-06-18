@@ -3,6 +3,11 @@
 <c:import url="../layout/app.jsp">
     <c:param name="content">
         <h2>メッセージ一覧</h2>
+        <c:if test="${flush != null}">
+            <div id="flush_success">
+                <c:out value="${flush}"></c:out>
+            </div>
+        </c:if>
         <ul>
             <c:forEach var="message" items="${messages}">
                 <li>
